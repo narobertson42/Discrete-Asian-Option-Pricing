@@ -1,2 +1,7 @@
-# Discrete-Asian-Option-Pricing
-Discrete Asian Option Pricing for GPUs
+# Discrete Asian Option Pricing
+
+Option pricing is often a computationally intensive process, particularly when the option requires the use of Monte Carlo based pricing methods. Last year, Pieter Fabry developed a new method based on Monte Carlo pricing over Cox-Ross-Rubinstein binomial trees, using random asset paths based on flipping a biased coin, rather than generating a log-normal distributed sample. He discovered that the parallelisation benefits of the discrete model outweighed the expected losses in accuracy hardware for FPGAs.
+
+This project concerns the analysis and implementation of discrete space pricing schemes for GPUs. The project considers whether the parallelisation advantages posited for FPGAs hold for GPUs. The basis of this discrete-space investigation considers Jarrow-Rudd binomial trees, multinomial trees, antithetic sampling, and control variates.
+
+It is found that normally sampled multinomial trees can be constructed with the same convergence properties as a continuous Gaussian walk. On a GPU, the continuous model can be replaced with a sampled multinomial tree with 64 discretisations - this resulted in a 3.14× increase in throughput compared to the continuous equivalent. Antithetic sampling improved the throughput increase to 3.65×. The addition of a geometric control variate as well as the antithetic variate resulted in an 18.82× speed up for a 99% confidence interval of size 2 × 10−3.
