@@ -1,5 +1,5 @@
 # Discrete Asian Option Pricing for GPUs
-This repository is a **simplified** version of the code written for the included Final Year Project [Report, "Asian Option Pricing Techniques for GPUs"](../blob/master/Report.pdf). It has been simplified by stripping extraneous option pricing engines, testing scripts, and anything else deemed superfluous to understanding the underlying algorithms.
+This repository is a **simplified** version of the code written for the included [Final Year Project Report, "Asian Option Pricing Techniques for GPUs"](../master/Report.pdf). It has been simplified by stripping extraneous option pricing engines, testing scripts, and anything else deemed superfluous to understanding the underlying algorithms.
 
 ## Report Abstract
 
@@ -11,7 +11,7 @@ It is found that normally  multinomial trees can be constructed with the same co
 
 ## Framework Structure
 
-![UML-esque Diagram](../blob/master/TestSuiteArchitecture.png?raw=true)
+![UML-esque Diagram](../master/TestSuiteArchitecture.png?raw=true)
 
 ## Getting Started
 
